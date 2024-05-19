@@ -1,0 +1,25 @@
+/* Global styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: #F0F8FF;
+}
+
+/* navbar */
+nav {
+    background: #00BFFF;
+    padding: 1rem 1.5rem;
+  }
+  /* fixed nav */
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 60px;
+  }
