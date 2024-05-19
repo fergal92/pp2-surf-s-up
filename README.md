@@ -72,6 +72,19 @@ Kalam: A hand-drawn, casual font with a handwritten feel. It works well for body
 .
 ### Wireframes
 
+#### Mobile Wireframes
+![Surf shop](readme-media/mobile-surf-shop.png)
+![Surf spot](readme-media/mobile-surf-spot.png)
+![Surf game question](readme-media/mobile-surf-game-question.png)
+![Surf data input](readme-media/mobile-data-input.png)
+
+#### Desktop Wireframes
+![Surf shop](readme-media/surf-shop.png)
+![Surf spot](readme-media/surf-spot.png)
+![Surf game question](readme-media/surf-game-question.png)
+![Surf data input](readme-media/data-input.png)
+
+
 ## Testing
 
 ## Deployment
