@@ -1,9 +1,11 @@
 # Surf's Up
+Surf's up is a text based surfing game. You begin the game as a surfing kook and by the end you become an advanced surfing expert capable of riding the biggest waves. 
 
+The site also provides information on different surf breaks around Ireland including up to date information taken from a real surf forecasting app. 
 
 Visit the site 
 
-responive image
+responsive image
 
 ## User stories
 
@@ -71,7 +73,6 @@ Yellowtail: A playful, bouncy script font that brings to mind tropical cocktails
 Kalam: A hand-drawn, casual font with a handwritten feel. It works well for body text in a tropical-themed design
 .
 ### Wireframes
-
 #### Mobile Wireframes
 ![Surf shop](readme-media/mobile-surf-shop.png)
 ![Surf spot](readme-media/mobile-surf-spot.png)
