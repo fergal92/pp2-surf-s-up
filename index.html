@@ -3,53 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surf's Up</title>
+    <!-- Author and description -->
+    <meta name="author" content="Fergal Mulligan" />
+    <meta name="description"
+        content="PP2 project 2 for code institute. The prjoect uses HTML, CSS and javascript to create a basic website that is a text based surfing game and provides information on surfing spots in Ireland" />
+    <!-- keywords -->
+    <meta name="keywords" content="surfing, surf, game">
+    <!-- Favicon -->
+
+   
     <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
     <!-- styles -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Title -->
+    <title>Surf's Up</title>
 </head>
 <body>
-    <header id="home">
-        <!-- navbar -->
-        <nav id="nav">
-            <div class="nav-center">
-              <!-- nav header -->
-              <div class="nav-header">
-                <img src="assets/surfs-up-logo-120x40.png" class="logo" alt="logo" />
-                <button class="nav-toggle">
-                  <i class="fas fa-bars"></i>
-                </button>
-              </div>
-              <!-- links -->
-          <div class="links-container">
-            <ul class="links">
-              <li>
-                <a href="#home" class="scroll-link">home</a>
-              </li>
-              <li>
-                <a href="#about" class="scroll-link">about</a>
-              </li>
-              <li>
-                <a href="#services" class="scroll-link">services</a>
-              </li>
-              <li>
-                <a href="#tours" class="scroll-link">tours</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </header>
+  <!-- header -->
+  <header>
+    <a href="index.html">
+        <img src="assets/surfs-up-logo-120x40.png"  id="logo">
+    </a>
+    <!-- <input type="checkbox" id="nav-toggle" name="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">X</label> -->
+    <nav>
+        <ul id="menu">
+            <li><a aria-label="nav bar home" href="index.html">Home</a></li>
+            <li><a aria-label="nav bar surf spot" href="surfspot.html">Surf spot</a></li>
+            <li><a aria-label="nav bar contact" href="info.html">Info</a></li>
+        </ul>
+    </nav>
+  </header>    
 
-    <!-- footer -->
-    <footer class="section">
-        <p>
-          copyright &copy; backroads travel tours company
-          <span id="date"></span>. all rights reserved
-        </p>
-      </footer>
+  <!-- main -->
+  <main>
+
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <ul id="social-networks">
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                aria-label="Vist our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li><a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                aria-label="Vist our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                aria-label="Vist our YouTube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Vist our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+    </ul>
+</footer>
+
+<!-- Font awesome kit -->
+<script src="https://kit.fontawesome.com/3d6e2b3d0a.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,25 +1,139 @@
 /* Global styles */
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* general style */
+body {
+  font-family: Raleway, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  color: black;
+  flex-direction: column;
+  background-color: #00BFFF;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
-body{
-    background: #F0F8FF;
+/* header */
+header {
+  background-color: #F0F8FF;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  position: fixed;
+  justify-content: space-between;
+  z-index: 99;
+  width: 100%;
+  color: black;
+}
+header a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* navbar */
-nav {
-    background: #00BFFF;
-    padding: 1rem 1.5rem;
-  }
-  /* fixed nav */
-  .nav-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+#menu {
+  list-style-type: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+ #menu li {
+   margin-bottom: 1em; 
+ }
 
-  .logo {
-    height: 60px;
-  }
+#menu a:hover {
+  color: #FFD700;
+}
+
+.active-link {
+  border-bottom: 1px solid #F0F8FF;
+}
+
+/* footer */
+footer {
+  background-color: #FFD700;
+  color: white;
+  margin-top: auto;
+}
+
+#social-networks {
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+  justify-content: space-evenly;
+  right: 0px;
+  font-size: 30px;
+}
+
+#social-networks li {
+  padding: 1% 5%;
+}
+
+#social-networks li a {
+  color: white;
+}
+
+#social-networks li a:hover {
+  color: #00BFFF;
+}
+
+/* media query for tablets */
+@media screen and (min-width: 768px) {
+
+    /* header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu li {
+        margin-bottom: 0;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    /* main content */
+    main {
+        /* push main content down for larger header */
+        margin-top: 84px;
+    }
+}
+
+/* media query for larger laptops */
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    #menu li {
+        margin-bottom: 0;
+    }
+
+    main {
+        margin-top: 70px;
+    }
+
+    #hero-img {
+        width: 1024px;
+        height: 683px;
+    }
+
+}
