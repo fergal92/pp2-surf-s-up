@@ -38,7 +38,55 @@
 
   <!-- main -->
   <main>
+    <!-- data input section -->
+    <section id="data-input">
+        <div class="text-center">
+            <!-- form -->
+            <form action="surf-spot.html">
+                <!-- name -->
+                <fieldset>
+                    <label for="name">Enter Your First Name: <input id="name" name="name" type="text" required=""></label>
+                </fieldset>
+                <!-- surf level -->
+                <fieldset>
+                    <label for="surf-level">What is your surfing level?
+                      <select id="surf-level" name="surf level">
+                        <option value="">(select one)</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Inetermediate</option>
+                        <option value="3">Advanced</option>
+                      </select>
+                    </label>
+                </fieldset>
+                <!-- height and weight dimensions -->
+                <fieldset>
+                    <label for="height">Enter Your Height (cm): <input id="height" name="height" type="number" required=""></label>
+                    <label for="weight">Enter Your Weight (Kg): <input id="weight" name="weight" type="number" required=""></label>
+                </fieldset>
+                <!-- submit button -->
+                <input aria-label="send" class="button" type="submit" value="Lets Go!">
+            </form>
+        </div>
+    </section>
 
+    <!-- surf shop section -->
+    <section id="surf-shop">
+        <div>
+            <img src="assets/longboard.jpg" alt="longboard">
+            <h2 id="surfboard-type">Longboard</h2>
+            <h3>Board dimensions: 9ft</h3>
+            <button id="go-surfing">Go Surfing!</button>
+        </div>
+    </section>
+
+    <!-- Surf spot section -->
+    <section id="surf-spot">
+        <div>
+            <img src="assets/inch-beach-beginner.jpg" alt="Inch Strand, Co. Kerry">
+            <h2>Inch Strand, Co. Kerry</h2>
+            <p>A lovely beach hai</p>
+        </div>
+    </section>
   </main>
 
   <!-- footer -->
