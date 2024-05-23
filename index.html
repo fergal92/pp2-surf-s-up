@@ -15,7 +15,7 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
     <!-- styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Title -->
     <title>Surf's Up</title>
 </head>
@@ -40,7 +40,7 @@
   <main>
     <!-- data input section -->
     <section id="data-input">
-        <div class="text-center">
+        <div class="text-center div-center">
             <!-- form -->
             <form action="surf-spot.html">
                 <!-- name -->
@@ -71,7 +71,7 @@
 
     <!-- surf shop section -->
     <section id="surf-shop">
-        <div>
+        <div id="surf-shop-container" class="div-center">
             <img src="assets/longboard.jpg" alt="longboard">
             <h2 id="surfboard-type">Longboard</h2>
             <h3>Board dimensions: 9ft</h3>
@@ -81,10 +81,19 @@
 
     <!-- Surf spot section -->
     <section id="surf-spot">
-        <div>
+        <div id="surf-spot-container" class="div-center">
             <img src="assets/inch-beach-beginner.jpg" alt="Inch Strand, Co. Kerry">
             <h2>Inch Strand, Co. Kerry</h2>
             <p>A lovely beach hai</p>
+        </div>
+        <!-- surf game container / Taken from webdevsiplified text based game youtube video / -->
+        <div id="surf-game-container" class="div-center">
+            <div id="game-text">Text</div>
+            <div id="option-buttons" class="btn-grid">
+                <button class="btn">Option 1</button>
+                <button class="btn">Option 2</button>
+                <button class="btn">Option 3</button>
+            </div>
         </div>
     </section>
   </main>
@@ -110,5 +119,7 @@
 <!-- Font awesome kit -->
 <script src="https://kit.fontawesome.com/3d6e2b3d0a.js" crossorigin="anonymous"></script>
 
+<!-- javascript link -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>

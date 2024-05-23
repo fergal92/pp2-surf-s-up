@@ -1,6 +1,6 @@
 /* Global styles */
 /* Asterisk wildcard selector to override default styles added by the browser */
-* {
+*, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -10,11 +10,23 @@
 body {
   font-family: Raleway, sans-serif;
   display: flex;
-  min-height: 100vh;
   color: black;
   flex-direction: column;
   background-color: #00BFFF;
 }
+
+.div-center{
+  max-width: fit-content;
+  margin-inline: auto;
+}
+
+/* main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+} */
 
 .text-center{
   text-align: center;
@@ -58,6 +70,36 @@ header a {
   border-bottom: 1px solid #F0F8FF;
 }
 
+/* Taken from webdevsiplified text based game youtube video */
+#surf-game-container{
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+
+/* Taken from webdevsiplified text based game youtube video */
+.btn-grid{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn{
+  background-color: hsl(200, 100%, 50%);
+  border: 1px solid hsl(200, 100%, 30%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover{
+  border-color: black;
+}
 /* footer */
 footer {
   background-color: #FFD700;
