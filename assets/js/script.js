@@ -10,16 +10,19 @@ const advancedAudio = document.getElementById('advanced-audio');
 // Text based game
 console.log('hello')
 let state = {}
+let currentAudio = null;
 
 /**
  * Starts the game
  */
 function startGame(){
+    stopAllAudio();
     state = {
         surfboard: 'beginner surfboard',
         surfSpot: 'beginner surf spot',
         surfGif: ''
     } ;
+    updateAudio();
     showTextNode(1)
 }
 
@@ -91,7 +94,7 @@ function showTextNode(textNodeIndex){
 }
 
 /** 
-*
+* Checks if an option should be shown
 */
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state);
@@ -106,8 +109,38 @@ function selectOption(option) {
         return startGame()
     }
     state = Object.assign(state, option.setState)
-    updateImages(); // call updateImages() after upodateing the staet
+    updateImages(); // call updateImages() after updateing the state
+    updateAudio(); // call updateAudio() after updating the state
     showTextNode(nextTextNodeId)
+}
+
+/**
+ * play appropriate audio based on surfboard state
+ */
+function playAudio(board) {
+    stopAllAudio();
+    if (board === 'beginner surfboard') {
+        beginnerAudio.play();
+    } else if (board === 'intermediate surfboard') {
+        intermediateAudio.play();
+    } else if (board === 'advanced surfboard') {
+        advancedAudio.play();
+    }
+}
+
+function updateAudio() {
+    playAudio(state.surfboard);
+}
+/**
+ * Stops all audio
+ */
+function stopAllAudio() {
+    beginnerAudio.pause();
+    beginnerAudio.currentTime = 0;
+    intermediateAudio.pause();
+    intermediateAudio.currentTime = 0;
+    advancedAudio.pause();
+    advancedAudio.currentTime = 0;
 }
 
 // Text nodes array
@@ -118,7 +151,7 @@ const textNodes = [
         options: [
             {
                 text: 'Paddle out',
-                setState: { surfboard: 'intermediate surfboard', surfSpot: 'intermediate surf spot', surfAction: 'paddle out' },
+                setState: { surfboard: 'beginner surfboard', surfSpot: 'beginner surf spot', surfAction: 'paddle out' },
                 nextText: 2
             },
         ]
