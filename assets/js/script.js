@@ -3,6 +3,9 @@ const optionButtonsElement = document.getElementById('option-buttons')
 const surfboardImage = document.getElementById('surfboard-image');
 const surfSpotImage = document.getElementById('surfspot-image');
 const surfGif = document.getElementById('surf-gif')
+const beginnerAudio = document.getElementById('beginner-audio');
+const intermediateAudio = document.getElementById('intermediate-audio');
+const advancedAudio = document.getElementById('advanced-audio');
 
 // Text based game
 console.log('hello')
@@ -40,9 +43,31 @@ function updateImages() {
         surfSpotImage.src = 'assets/images/pmpa-advanced.jpg'; // Path to advanced surf spot image
     }
 
-    if (state.surfSpot === 'paddle out'){
+    if (state.surfAction === 'paddle out') {
         surfGif.src = 'assets/images/paddle-out.gif';
-    } else if (state.surfGif === 'wipeout'){}
+    } else if(state.surfAction === 'wipeout'){
+        surfGif.src = 'assets/images/wipeout.gif';
+    } else if(state.surfAction === 'surfing beginner'){
+        surfGif.src = 'assets/images/surfing-beginner.gif';
+    } else if(state.surfAction === 'surfing intermediate'){
+        surfGif.src = 'assets/images/surfing-intermediate.gif';
+    } else if(state.surfAction === 'surfing advanced'){
+        surfGif.src = 'assets/images/surfing-advanced.gif';
+    } else if(state.surfAction === 'surf travel'){
+        surfGif.src = 'assets/images/surfing-travel.gif';
+    } else if(state.surfAction === 'turtle roll'){
+        surfGif.src = 'assets/images/turtle-roll.gif';
+    } else if(state.surfAction === 'duck dive'){
+        surfGif.src = 'assets/images/duck-dive.gif';
+    } else if(state.surfAction === 'take break'){
+        surfGif.src = 'assets/images/take-break.gif';
+    } else if(state.surfAction === 'break board'){
+        surfGif.src = 'assets/images/broken-board.gif';
+    } else if(state.surfAction === 'bottom turn'){
+        surfGif.src = 'assets/images/bottom-turn.gif';
+    } else if(state.surfAction === 'pop up'){
+        surfGif.src = 'assets/images/pop-up.gif';
+    }
 }
 
 /**
@@ -93,6 +118,7 @@ const textNodes = [
         options: [
             {
                 text: 'Paddle out',
+                setState: { surfboard: 'intermediate surfboard', surfSpot: 'intermediate surf spot', surfAction: 'paddle out' },
                 nextText: 2
             },
         ]
@@ -103,10 +129,12 @@ const textNodes = [
         options: [
             {
                 text: 'Catch the wave',
+                setState: { surfAction: 'surfing beginner' },
                 nextText: 3
             },
             {
                 text: 'Avoid the wave with a turtle roll',
+                setState: { surfAction: 'turtle roll' },
                 nextText: 4
             }
         ]
@@ -117,6 +145,7 @@ const textNodes = [
         options: [
             {
                 text: 'Continue to intermediate level',
+                setState: { surfAction: 'surf travel' },
                 nextText: 6
             }
         ]
@@ -127,10 +156,12 @@ const textNodes = [
         options: [
             {
                 text: 'Continue surfing',
+                setState: { surfAction: 'paddle out' },
                 nextText: 2
             },
             {
                 text: 'Return to beach',
+                setState: { surfAction: '' },
                 nextText: -1
             }
         ]
@@ -141,7 +172,7 @@ const textNodes = [
         options: [
             {
                 text: 'Yes, bring it on!',
-                setState: { surfboard: 'intermediate surfboard', surfSpot: 'intermediate surf spot' },
+                setState: { surfboard: 'intermediate surfboard', surfSpot: 'intermediate surf spot', surfAction: 'surf travel' },
                 nextText: 7
             }
         ]
@@ -152,10 +183,12 @@ const textNodes = [
         options: [
             {
                 text: 'Paddle out',
+                setState: { surfAction: 'paddle out' },
                 nextText: 8
             },
             {
                 text: 'Take a break',
+                setState: { surfAction: 'take break' },
                 nextText: 6
             }
         ]
@@ -166,10 +199,12 @@ const textNodes = [
         options: [
             {
                 text: 'Catch the wave',
+                setState: { surfAction: 'pop up' },
                 nextText: 9
             },
             {
                 text: 'Avoid the wave with a duck dive',
+                setState: { surfAction: 'duck dive' },
                 nextText: 10
             }
         ]
@@ -180,10 +215,12 @@ const textNodes = [
         options: [
             {
                 text: 'Attempt a cut back?',
+                setState: { surfAction: 'wipeout' },
                 nextText: 11
             },
             {
                 text: 'Attempt a bottom turn?',
+                setState: { surfAction: 'bottom turn' },
                 nextText: 12
             }
         ]
@@ -194,10 +231,12 @@ const textNodes = [
         options: [
             {
                 text: 'Continue surfing',
+                setState: { surfAction: 'paddle out' },
                 nextText: 8
             },
             {
                 text: 'Return to beach',
+                setState: { surfAction: '' },
                 nextText: 6
             }
         ]
@@ -208,6 +247,7 @@ const textNodes = [
         options: [
             {
                 text: 'Duck dive the wave',
+                setState: { surfAction: 'duck dive' },
                 nextText: 10
             },
         ]
@@ -218,10 +258,12 @@ const textNodes = [
         options: [
             {
                 text: 'Attempt a cut back',
+                setState: { surfAction: 'wipeout' },
                 nextText: 11
             },
             {
                 text: 'Attempt to carve down the line',
+                setState: { surfAction: 'surfing intermediate' },
                 nextText: 13
             }
         ]
@@ -232,6 +274,7 @@ const textNodes = [
         options: [
             {
                 text: 'Continue to advanced level',
+                setState: { surfAction: 'surf travel' },
                 nextText: 14
             }
         ]
@@ -253,6 +296,7 @@ const textNodes = [
         options: [
             {
                 text: 'Paddle out',
+                setState: { surfAction: 'paddle out' },
                 nextText: 16
             },
         ]
@@ -263,10 +307,12 @@ const textNodes = [
         options: [
             {
                 text: 'Attempt to catch the wave',
+                setState: { surfAction: 'break board' },
                 nextText: 17
             },
             {
                 text: 'Avoid the wave with a duck dive',
+                setState: { surfAction: 'duck dive' },
                 nextText: 18
             }
         ]
@@ -277,6 +323,7 @@ const textNodes = [
         options: [
             {
                 text: 'paddle in with your broken board and borrow another',
+                setState: { surfAction: '' },
                 nextText: 15
             },
         ]
@@ -287,10 +334,12 @@ const textNodes = [
         options: [
             {
                 text: 'Attempt to catch the wave',
+                setState: { surfAction: 'pop up' },
                 nextText: 19
             },
             {
                 text: 'Avoid the wave with a duck dive',
+                setState: { surfAction: 'wipeout' },
                 nextText: 20
             }
         ]
@@ -301,10 +350,12 @@ const textNodes = [
         options: [
             {
                 text: 'Tuck in and attempt to get barrelled?',
+                setState: { surfAction: 'surfing advanced' },
                 nextText: 21
             },
             {
                 text: 'Attempt a bottom turn?',
+                setState: { surfAction: 'break board' },
                 nextText: 22
             }
         ]
@@ -315,6 +366,7 @@ const textNodes = [
         options: [
             {
                 text: 'paddle in with your broken board and borrow another',
+                setState: { surfAction: '' },
                 nextText: 15
             },
         ]
@@ -325,10 +377,12 @@ const textNodes = [
         options: [
             {
                 text: 'Keep surfing?',
+                setState: { surfAction: 'paddle out' },
                 nextText: 16
             },
             {
                 text: 'Paddle in?',
+                setState: { surfAction: '' },
                 nextText: 15
             }
         ]
@@ -339,6 +393,7 @@ const textNodes = [
         options: [
             {
                 text: 'paddle in with your broken board and borrow another',
+                setState: { surfAction: '' },
                 nextText: 15
             },
         ]

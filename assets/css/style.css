@@ -113,6 +113,14 @@ header a {
   max-width: 380px;
   height: auto;
 }
+#gif-container{
+  display: flex;
+  justify-content: center;
+}
+#gif-container img {
+  max-width: 100%;
+  height: auto;
+}
 /* footer */
 footer {
   background-color: #FFD700;
