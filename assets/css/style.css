@@ -13,6 +13,7 @@ body {
   color: black;
   flex-direction: column;
   background-color: #00BFFF;
+  min-height: 100vh;
 }
 
 .div-center{
@@ -82,9 +83,9 @@ header a {
 
 /* Taken from webdevsiplified text based game youtube video */
 .btn-grid{
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  /* gap: 10px; */
   margin-top: 20px;
 }
 
@@ -95,10 +96,22 @@ header a {
   padding: 5px 10px;
   color: white;
   outline: none;
+  flex-grow: 1;
+  margin: 0 5px;
 }
 
 .btn:hover{
   border-color: black;
+}
+
+/* game images */
+.game-images{
+  display: flex;
+  justify-content: space-evenly;
+}
+.game-images img{
+  max-width: 300px;
+  height: auto;
 }
 /* footer */
 footer {

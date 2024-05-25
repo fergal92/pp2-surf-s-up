@@ -23,7 +23,7 @@
   <!-- header -->
   <header>
     <a href="index.html">
-        <img src="assets/surfs-up-logo-120x40.png"  id="logo">
+        <img src="assets/images/surfs-up-logo-120x40.png"  id="logo">
     </a>
     <!-- <input type="checkbox" id="nav-toggle" name="nav-toggle">
     <label for="nav-toggle" class="nav-toggle-label">X</label> -->
@@ -45,23 +45,24 @@
             <form action="surf-spot.html">
                 <!-- name -->
                 <fieldset>
-                    <label for="name">Enter Your First Name: <input id="name" name="name" type="text" required=""></label>
+                    <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required=""></label>
                 </fieldset>
                 <!-- surf level -->
                 <fieldset>
-                    <label for="surf-level">What is your surfing level?
-                      <select id="surf-level" name="surf level">
+                    <label for="surf-level">What is your surfing level?</label>
+                    <select id="surf-level" name="surf-level" required>
                         <option value="">(select one)</option>
                         <option value="1">Beginner</option>
-                        <option value="2">Inetermediate</option>
+                        <option value="2">Intermediate</option>
                         <option value="3">Advanced</option>
-                      </select>
-                    </label>
+                    </select>
                 </fieldset>
                 <!-- height and weight dimensions -->
                 <fieldset>
-                    <label for="height">Enter Your Height (cm): <input id="height" name="height" type="number" required=""></label>
-                    <label for="weight">Enter Your Weight (Kg): <input id="weight" name="weight" type="number" required=""></label>
+                    <label for="height">Enter Your Height (cm): </label>
+                    <input id="height" name="height" type="number" required="">
+                    <label for="weight">Enter Your Weight (Kg): </label>
+                    <input id="weight" name="weight" type="number" required="">
                 </fieldset>
                 <!-- submit button -->
                 <input aria-label="send" class="button" type="submit" value="Lets Go!">
@@ -70,31 +71,37 @@
     </section>
 
     <!-- surf shop section -->
-    <section id="surf-shop">
+    <!-- <section id="surf-shop">
         <div id="surf-shop-container" class="div-center">
-            <img src="assets/longboard.jpg" alt="longboard">
+            <img id="surfboard-image" src="" alt="Surfboard image">
             <h2 id="surfboard-type">Longboard</h2>
             <h3>Board dimensions: 9ft</h3>
             <button id="go-surfing">Go Surfing!</button>
         </div>
-    </section>
+    </section> -->
 
     <!-- Surf spot section -->
-    <section id="surf-spot">
+    <!-- <section id="surf-spot">
         <div id="surf-spot-container" class="div-center">
             <img src="assets/inch-beach-beginner.jpg" alt="Inch Strand, Co. Kerry">
             <h2>Inch Strand, Co. Kerry</h2>
             <p>A lovely beach hai</p>
-        </div>
+        </div> -->
+
         <!-- surf game container / Taken from webdevsiplified text based game youtube video / -->
         <div id="surf-game-container" class="div-center">
-            <div id="game-text">Text</div>
+            <div class="game-images">
+                <img id="surfboard-image" src="assets/images/longboard.jpg" alt="Surfboard image">
+                <img id="surfspot-image" src="assets/images/inch-beach-beginner.jpg" alt="Surf spot image">
+            </div>
+            <div id="text" class="text-center">Text</div>
             <div id="option-buttons" class="btn-grid">
                 <button class="btn">Option 1</button>
                 <button class="btn">Option 2</button>
                 <button class="btn">Option 3</button>
             </div>
         </div>
+
     </section>
   </main>
 
