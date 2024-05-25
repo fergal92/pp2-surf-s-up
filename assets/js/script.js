@@ -2,6 +2,7 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const surfboardImage = document.getElementById('surfboard-image');
 const surfSpotImage = document.getElementById('surfspot-image');
+const surfGif = document.getElementById('surf-gif')
 
 // Text based game
 console.log('hello')
@@ -13,7 +14,8 @@ let state = {}
 function startGame(){
     state = {
         surfboard: 'beginner surfboard',
-        surfSpot: 'beginner surf spot'
+        surfSpot: 'beginner surf spot',
+        surfGif: ''
     } ;
     showTextNode(1)
 }
@@ -25,9 +27,9 @@ function updateImages() {
     if (state.surfboard === 'beginner surfboard') {
         surfboardImage.src = "assets/images/longboard.jpg"; // Path to beginner surfboard image
     } else if (state.surfboard === 'intermediate surfboard') {
-        surfboardImage.src = 'assets/images/midlength.jpg'; // Path to intermediate surfboard image
+        surfboardImage.src = 'assets/images/midlength-intermediate.jpg'; // Path to intermediate surfboard image
     } else if (state.surfboard === 'advanced surfboard') {
-        surfboardImage.src = 'assets/images/shortboard.jpg'; // Path to advanced surfboard image
+        surfboardImage.src = 'assets/images/shortboard-advanced.jpg'; // Path to advanced surfboard image
     }
 
     if (state.surfSpot === 'beginner surf spot') {
@@ -37,6 +39,10 @@ function updateImages() {
     } else if (state.surfSpot === 'advanced surf spot') {
         surfSpotImage.src = 'assets/images/pmpa-advanced.jpg'; // Path to advanced surf spot image
     }
+
+    if (state.surfSpot === 'paddle out'){
+        surfGif.src = 'assets/images/paddle-out.gif';
+    } else if (state.surfGif === 'wipeout'){}
 }
 
 /**
