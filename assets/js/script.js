@@ -109,10 +109,14 @@ function selectOption(option) {
     if (nextTextNodeId <= 0) {
         return startGame()
     }
-    state = Object.assign(state, option.setState)
-    updateImages(); // call updateImages() after updateing the state
-    updateAudio(); // call updateAudio() after updating the state
-    showTextNode(nextTextNodeId)
+    const newState = Object.assign({}, state, option.setState);
+    if (newState.surfboard && newState.surfboard !== currentSurfboardState) {
+        currentSurfboardState = newState.surfboard;
+        playAudio(newState.surfboard);
+    }
+    state = newState;
+    updateImages();
+    showTextNode(nextTextNodeId);
 }
 
 /**
