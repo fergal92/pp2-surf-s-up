@@ -11,6 +11,7 @@ const advancedAudio = document.getElementById('advanced-audio');
 console.log('hello')
 let state = {}
 let currentAudio = null;
+let currentSurfboardState = '';
 
 /**
  * Starts the game
