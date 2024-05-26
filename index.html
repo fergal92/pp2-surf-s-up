@@ -42,20 +42,10 @@
     <section id="data-input">
         <div class="text-center div-center">
             <!-- form -->
-            <form action="surf-spot.html">
+            <form id="surfForm" action="">
                 <!-- name -->
                 <fieldset>
                     <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required=""></label>
-                </fieldset>
-                <!-- surf level -->
-                <fieldset>
-                    <label for="surf-level">What is your surfing level?</label>
-                    <select id="surf-level" name="surf-level" required>
-                        <option value="">(select one)</option>
-                        <option value="1">Beginner</option>
-                        <option value="2">Intermediate</option>
-                        <option value="3">Advanced</option>
-                    </select>
                 </fieldset>
                 <!-- height and weight dimensions -->
                 <fieldset>
@@ -89,10 +79,16 @@
         </div> -->
 
         <!-- surf game container / Taken from webdevsiplified text based game youtube video / -->
-        <div id="surf-game-container" class="div-center">
+        <div id="surf-game-container" class="div-center" style="display: none;">
             <div class="game-images">
-                <img id="surfboard-image" src="assets/images/longboard.jpg" alt="Surfboard image">
-                <img id="surfspot-image" src="assets/images/inch-beach-beginner.jpg" alt="Surf spot image">
+                <div>
+                    <img id="surfboard-image" src="assets/images/longboard.jpg" alt="Surfboard image">
+                    <div id="surfboard-size-text" class="text-center">Surfboard Size: Beginner</div>
+                </div>
+                <div>
+                    <img id="surfspot-image" src="assets/images/inch-beach-beginner.jpg" alt="Surf spot image">
+                    <div id="surfspot-location-text" class="text-center">Surf Spot: Beginner Spot</div>
+                </div>
             </div>
             <div id="text" class="text-center">Text</div>
             <div id="option-buttons" class="btn-grid">

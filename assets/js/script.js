@@ -1,3 +1,70 @@
+document.getElementById('surfForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    // Get the form data
+    const firstName = document.getElementById('first-name').value;
+    const height = document.getElementById('height').value;
+    const weight = document.getElementById('weight').value;
+
+     // Save the data to localStorage
+     localStorage.setItem('firstName', firstName);
+     localStorage.setItem('height', height);
+     localStorage.setItem('weight', weight);
+
+    // Calculate surfboard size for the current user
+    const surfboardSizes = calculateSurfboardSize(height, weight); 
+
+    // Hide the form
+    document.getElementById('data-input').style.display = 'none';
+
+    // Show the surf game
+    document.getElementById('surf-game-container').style.display = 'block';
+
+    // Optionally, you can display a confirmation message or redirect to another page
+    alert(`Hi ${firstName}! Let's go surfing! Your surfboard sizes based on your height and weight will be: Beginner - ${surfboardSizes.beginner}, Intermediate - ${surfboardSizes.intermediate}, Advanced - ${surfboardSizes.advanced}`); 
+});
+
+// Calculate surfboard size for each category
+function calculateSurfboardSize(height, weight) {
+    let surfboardSize;
+    const heightWeightRatio = height / weight;
+
+    // Calculate beginner surfboard size
+    if (heightWeightRatio < 2) {
+        surfboardSize = '10ft';
+    } else if (heightWeightRatio >= 2 && heightWeightRatio < 3) {
+        surfboardSize = '9ft';
+    } else {
+        surfboardSize = '8ft';
+    }
+
+    // Intermediate and Advanced surfboard sizes based on beginner surfboard size
+    let intermediateSurfboardSize;
+    let advancedSurfboardSize;
+
+    switch (surfboardSize) {
+        case '10ft':
+            intermediateSurfboardSize = '9ft';
+            advancedSurfboardSize = '8ft';
+            break;
+        case '9ft':
+            intermediateSurfboardSize = '8ft';
+            advancedSurfboardSize = '7ft';
+            break;
+        case '8ft':
+            intermediateSurfboardSize = '7ft';
+            advancedSurfboardSize = '6ft';
+            break;
+        default:
+            intermediateSurfboardSize = '7ft';
+            advancedSurfboardSize = '6ft';
+            break;
+    }
+
+    return { beginner: surfboardSize, intermediate: intermediateSurfboardSize, advanced: advancedSurfboardSize };
+}
+
+
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const surfboardImage = document.getElementById('surfboard-image');
@@ -9,6 +76,7 @@ const advancedAudio = document.getElementById('advanced-audio');
 
 // Text based game
 console.log('hello')
+// console.log(surfboardSize);
 let state = {}
 let currentAudio = null;
 let currentSurfboardState = '';
@@ -31,20 +99,30 @@ function startGame(){
  * Updates the surboard and surf spot images depending on surf level
  */
 function updateImages() {
+    const surfboardSizeText = document.getElementById('surfboard-size-text');
+    const surfSpotLocationText = document.getElementById('surfspot-location-text');
+
+
     if (state.surfboard === 'beginner surfboard') {
         surfboardImage.src = "assets/images/longboard.jpg"; // Path to beginner surfboard image
+        surfboardSizeText.innerText = 'Surfboard Size: 10ft';
     } else if (state.surfboard === 'intermediate surfboard') {
         surfboardImage.src = 'assets/images/midlength-intermediate.jpg'; // Path to intermediate surfboard image
+        surfboardSizeText.innerText = 'Surfboard Size: 9ft';
     } else if (state.surfboard === 'advanced surfboard') {
         surfboardImage.src = 'assets/images/shortboard-advanced.jpg'; // Path to advanced surfboard image
+        surfboardSizeText.innerText = 'Surfboard Size: 8ft';
     }
 
     if (state.surfSpot === 'beginner surf spot') {
         surfSpotImage.src = 'assets/images/inch-beach-beginner.jpg'; // Path to beginner surf spot image
+        surfSpotLocationText.innerText = 'Surf Spot: Beginner Spot';
     } else if (state.surfSpot === 'intermediate surf spot') {
         surfSpotImage.src = 'assets/images/strandhill-intermediate.jpg'; // Path to intermediate surf spot image
+        surfSpotLocationText.innerText = 'Surf Spot: Intermediate Spot';
     } else if (state.surfSpot === 'advanced surf spot') {
         surfSpotImage.src = 'assets/images/pmpa-advanced.jpg'; // Path to advanced surf spot image
+        surfSpotLocationText.innerText = 'Surf Spot: Advanced Spot';
     }
 
     if (state.surfAction === 'paddle out') {
@@ -117,7 +195,17 @@ function selectOption(option) {
     state = newState;
     updateImages();
     showTextNode(nextTextNodeId);
+
+    // Check if it's the end of the game
+    if (nextTextNodeId === 16 && option.text === 'Finish game') {
+        // Show alert message
+        alert('Congratulations! You have completed the game. Go out and surf for real now you are ready!');
+
+        // Reload the page to start again
+        window.location.href = 'index.html';
+    }
 }
+
 
 /**
  * play appropriate audio based on surfboard state
@@ -414,15 +502,9 @@ const textNodes = [
         text: "You make the barrel and have the ride of your life!!! Congratulations you pass the advanced level!",
         options: [
             {
-                text: 'Keep surfing?',
-                setState: { surfAction: 'paddle out' },
+                text: 'Finish game',
                 nextText: 16
             },
-            {
-                text: 'Paddle in?',
-                setState: { surfAction: '' },
-                nextText: 15
-            }
         ]
     },
     {
