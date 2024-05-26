@@ -200,7 +200,7 @@ const textNodes = [
             {
                 text: 'Return to beach',
                 setState: { surfAction: '' },
-                nextText: -1
+                nextText: 1
             }
         ]
     },
