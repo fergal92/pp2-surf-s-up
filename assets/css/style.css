@@ -1,9 +1,15 @@
+/* Font import from google */
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
 /* Global styles */
 /* Asterisk wildcard selector to override default styles added by the browser */
 *, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: Raleway;
 }
 
 /* general style */
@@ -40,6 +46,7 @@ html {
 /* header */
 header {
   background-color: #F0F8FF;
+  font-family: Kalam;
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -59,12 +66,12 @@ header a {
   font-size: 20px;
   letter-spacing: 2px;
 }
- #menu li {
-   margin-bottom: 1em; 
+#menu li {
+  margin-bottom: 1em; 
  }
 
 #menu a:hover {
-  color: #FFD700;
+  color: #00BFFF;
 }
 
 .active-link {
@@ -74,17 +81,32 @@ header a {
 /* Taken from webdevsiplified text based game youtube video */
 #surf-game-container{
   width: 800px;
+  font-family: Kalam;
   max-width: 80%;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
+  margin-bottom: 20px;
 }
 
+#text{
+  font-family: Raleway;
+  padding:10px;
+}
+
+#text-container{
+  background-color: #FFD700;
+  color: #F0F8FF;
+  background-color: hsl(200, 100%, 50%);
+  border: 1px solid hsl(200, 100%, 30%);
+  border-radius: 5px;
+}
 /* Taken from webdevsiplified text based game youtube video */
 .btn-grid{
   display: flex;
   justify-content: space-evenly;
+  padding: 10px 20px;
   /* gap: 10px; */
   margin-top: 20px;
 }
@@ -93,8 +115,11 @@ header a {
   background-color: hsl(200, 100%, 50%);
   border: 1px solid hsl(200, 100%, 30%);
   border-radius: 5px;
+  background-color: #FFD700;
   padding: 5px 10px;
-  color: white;
+  color: #00BFFF;
+  font-family: Kalam;
+  font-size: 1.5rem;
   outline: none;
   flex-grow: 1;
   margin: 0 5px;
@@ -111,7 +136,7 @@ header a {
 }
 .game-images img{
   max-width: 380px;
-  height: auto;
+  height: 380px;
 }
 #gif-container{
   display: flex;
@@ -119,7 +144,10 @@ header a {
 }
 #gif-container img {
   max-width: 100%;
-  height: auto;
+  width: 350px ;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 2px;
 }
 /* footer */
 footer {

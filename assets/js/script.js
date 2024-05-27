@@ -14,6 +14,12 @@ document.getElementById('surfForm').addEventListener('submit', function(event) {
     // Calculate surfboard size for the current user
     const surfboardSizes = calculateSurfboardSize(height, weight); 
 
+    // Save surfboard sizes to localStorage
+    localStorage.setItem('surfboardSizes', JSON.stringify(surfboardSizes));
+
+    // Update the state to include surfboardSizes in order to display the correct size in the game
+    state.surfboardSizes = surfboardSizes;
+
     // Hide the form
     document.getElementById('data-input').style.display = 'none';
 
@@ -31,11 +37,11 @@ function calculateSurfboardSize(height, weight) {
 
     // Calculate beginner surfboard size
     if (heightWeightRatio < 2) {
-        surfboardSize = '10ft';
+        surfboardSize = '10\'';
     } else if (heightWeightRatio >= 2 && heightWeightRatio < 3) {
-        surfboardSize = '9ft';
+        surfboardSize = '9\'';
     } else {
-        surfboardSize = '8ft';
+        surfboardSize = '8\'';
     }
 
     // Intermediate and Advanced surfboard sizes based on beginner surfboard size
@@ -43,26 +49,27 @@ function calculateSurfboardSize(height, weight) {
     let advancedSurfboardSize;
 
     switch (surfboardSize) {
-        case '10ft':
-            intermediateSurfboardSize = '9ft';
-            advancedSurfboardSize = '8ft';
+        case '10\'':
+            intermediateSurfboardSize = '8\'';
+            advancedSurfboardSize = '7\'';
             break;
-        case '9ft':
-            intermediateSurfboardSize = '8ft';
-            advancedSurfboardSize = '7ft';
+        case '9\'':
+            intermediateSurfboardSize = "7'6\"";
+            advancedSurfboardSize = '6\'';
             break;
-        case '8ft':
-            intermediateSurfboardSize = '7ft';
-            advancedSurfboardSize = '6ft';
+        case '8\'':
+            intermediateSurfboardSize = '7\'';
+            advancedSurfboardSize = '5\'6"';
             break;
         default:
-            intermediateSurfboardSize = '7ft';
-            advancedSurfboardSize = '6ft';
+            intermediateSurfboardSize = '7\'';
+            advancedSurfboardSize = '5\'6"';
             break;
     }
 
     return { beginner: surfboardSize, intermediate: intermediateSurfboardSize, advanced: advancedSurfboardSize };
 }
+
 
 
 const textElement = document.getElementById('text')
@@ -103,26 +110,28 @@ function updateImages() {
     const surfSpotLocationText = document.getElementById('surfspot-location-text');
 
 
+    const { surfboardSizes } = state;
+
     if (state.surfboard === 'beginner surfboard') {
         surfboardImage.src = "assets/images/longboard.jpg"; // Path to beginner surfboard image
-        surfboardSizeText.innerText = 'Surfboard Size: 10ft';
+        surfboardSizeText.innerText = `Longboard Size: ${surfboardSizes.beginner}`;
     } else if (state.surfboard === 'intermediate surfboard') {
         surfboardImage.src = 'assets/images/midlength-intermediate.jpg'; // Path to intermediate surfboard image
-        surfboardSizeText.innerText = 'Surfboard Size: 9ft';
+        surfboardSizeText.innerText = `Surfboard Size: ${surfboardSizes.intermediate}`;
     } else if (state.surfboard === 'advanced surfboard') {
         surfboardImage.src = 'assets/images/shortboard-advanced.jpg'; // Path to advanced surfboard image
-        surfboardSizeText.innerText = 'Surfboard Size: 8ft';
+        surfboardSizeText.innerText = `Surfboard Size: ${surfboardSizes.advanced}`;
     }
 
     if (state.surfSpot === 'beginner surf spot') {
         surfSpotImage.src = 'assets/images/inch-beach-beginner.jpg'; // Path to beginner surf spot image
-        surfSpotLocationText.innerText = 'Surf Spot: Beginner Spot';
+        surfSpotLocationText.innerText = 'Surf Spot: Inch Beach, Co. Kerry';
     } else if (state.surfSpot === 'intermediate surf spot') {
         surfSpotImage.src = 'assets/images/strandhill-intermediate.jpg'; // Path to intermediate surf spot image
-        surfSpotLocationText.innerText = 'Surf Spot: Intermediate Spot';
+        surfSpotLocationText.innerText = 'Surf Spot: Strandhill, Co. Sligo';
     } else if (state.surfSpot === 'advanced surf spot') {
         surfSpotImage.src = 'assets/images/pmpa-advanced.jpg'; // Path to advanced surf spot image
-        surfSpotLocationText.innerText = 'Surf Spot: Advanced Spot';
+        surfSpotLocationText.innerText = 'Surf Spot: Pmpa, Co. Donegal';
     }
 
     if (state.surfAction === 'paddle out') {
