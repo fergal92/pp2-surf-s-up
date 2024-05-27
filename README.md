@@ -3,7 +3,7 @@ Surf's up is a text based surfing game. You begin the game as a surfing kook and
 
 The site also provides information on different surf breaks around Ireland including up to date information taken from a real surf forecasting app. 
 
-Visit the site 
+Visit the site - https://fergal92.github.io/pp2-surf-s-up/
 
 responsive image
 
