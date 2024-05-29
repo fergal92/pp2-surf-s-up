@@ -1,5 +1,15 @@
-document.getElementById('surfForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("surfForm");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form submission if validation fails
+
+
+        if (!validateForm()) {
+            // Prevent form submission if validation fails
+            return;
+        }
+
 
     // Get the form data
     const firstName = document.getElementById('first-name').value;
@@ -26,9 +36,49 @@ document.getElementById('surfForm').addEventListener('submit', function(event) {
     // Show the surf game
     document.getElementById('surf-game-container').style.display = 'block';
 
-    // Optionally, you can display a confirmation message or redirect to another page
+    // Alert message to begin game
     alert(`Hi ${firstName}! Let's go surfing! Your surfboard sizes based on your height and weight will be: Beginner - ${surfboardSizes.beginner}, Intermediate - ${surfboardSizes.intermediate}, Advanced - ${surfboardSizes.advanced}`); 
 });
+
+
+/** 
+ * Validation for height and weight in data input form
+*/
+function validateForm() {
+    clearErrors();
+
+    const height = parseFloat(document.getElementById("height").value);
+    const weight = parseFloat(document.getElementById("weight").value);
+
+    let valid = true;
+
+    if (height < 90 || height > 300) {
+        showError("heightError", "Height must be between 90cm and 300cm.");
+        valid = false;
+    }
+
+    if (weight < 20 || weight > 300) {
+        showError("weightError", "Weight must be between 20kg and 300kg.");
+        valid = false;
+    }
+
+    return valid;
+}
+
+/** 
+ * Function to show validation error in form 
+*/
+function showError(elementId, message) {
+    document.getElementById(elementId).textContent = message;
+}
+
+/**
+ * Clear all form errors
+ */
+function clearErrors() {
+    document.getElementById("heightError").textContent = "";
+    document.getElementById("weightError").textContent = "";
+}
 
 // Calculate surfboard size for each category
 function calculateSurfboardSize(height, weight) {
@@ -531,3 +581,4 @@ const textNodes = [
 
 // call start game function
 startGame()
+});
