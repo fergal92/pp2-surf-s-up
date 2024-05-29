@@ -78,6 +78,40 @@ header a {
   border-bottom: 1px solid #F0F8FF;
 }
 
+/* dropdown menu with toggle - credit to love running walkthrough project*/
+nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 2px 1px #c0c0c0ff;
+  display: none;
+  top: 100%;
+  padding-left: 1rem;
+}
+
+/* nav toggle */
+#nav-toggle:checked~nav {
+  display: block;
+  background-color: #F0F8FF;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  font-size: 2rem;
+}
+
+/* hand pointer cursor when hovering over hamburger icon */
+.nav-toggle-label:hover {
+  cursor: pointer;
+}
+
+main{
+  margin-top: 220px;
+}
+
 /* Taken from webdevsiplified text based game youtube video */
 #surf-game-container{
   width: 800px;
@@ -135,8 +169,8 @@ header a {
   justify-content: space-evenly;
 }
 .game-images img{
-  max-width: 380px;
-  height: 380px;
+  max-width: 120px;
+  height: 120px;
 }
 #gif-container{
   display: flex;
@@ -220,6 +254,11 @@ footer {
 
     #menu li {
         margin-bottom: 0;
+    }
+
+    .game-images img{
+      max-width: 380px;
+      height: 380px;
     }
 
     main {
