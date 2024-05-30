@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,60 +12,62 @@
     <meta name="keywords" content="surfing, surf, game">
     <!-- Favicon -->
 
-   
+
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <!-- styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Title -->
     <title>Surf's Up</title>
 </head>
+
 <body>
-  <!-- header -->
-  <header>
-    <a href="index.html">
-        <img src="assets/images/surfs-up-logo-120x40.png"  id="logo">
-    </a>
-    <input type="checkbox" id="nav-toggle" name="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">X</label>
-    <nav>
-        <ul id="menu">
-            <li><a aria-label="nav bar home" href="index.html">Home</a></li>
-            <li><a aria-label="nav bar surf spot" href="surfspot.html">Surf spot</a></li>
-            <li><a aria-label="nav bar contact" href="info.html">Info</a></li>
-        </ul>
-    </nav>
-  </header>    
+    <!-- header -->
+    <header>
+        <a href="index.html">
+            <img src="assets/images/surfs-up-logo-120x40.png" id="logo">
+        </a>
+        <input type="checkbox" id="nav-toggle" name="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">X</label>
+        <nav>
+            <ul id="menu">
+                <li><a aria-label="nav bar home" href="index.html">Home</a></li>
+                <li><a aria-label="nav bar surf spot" href="surfspot.html">Surf spot</a></li>
+                <li><a aria-label="nav bar contact" href="info.html">Info</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- main -->
-  <main>
-    <!-- data input section -->
-    <section id="data-input">
-        <div class="text-center div-center">
-            <!-- form -->
-            <form id="surfForm" action="">
-                <!-- name -->
-                <fieldset>
-                    <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required=""></label>
-                </fieldset>
-                <!-- height and weight dimensions -->
-                <fieldset>
-                    <label for="height">Enter Your Height (cm): </label>
-                    <input id="height" name="height" type="number" required="">
-                    <span class="error" id="heightError"></span>
-                    <label for="weight">Enter Your Weight (Kg): </label>
-                    <input id="weight" name="weight" type="number" required="">
-                    <span class="error" id="weightError"></span>
-                </fieldset>
-                <!-- submit button -->
-                <input aria-label="send" class="button" type="submit" value="Lets Go!">
-            </form>
-        </div>
+    <!-- main -->
+    <main>
+        <!-- data input section -->
+        <section id="data-input">
+            <div class="text-center div-center">
+                <!-- form -->
+                <form id="surfForm" action="">
+                    <!-- name -->
+                    <fieldset>
+                        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name"
+                                type="text" required=""></label>
+                    </fieldset>
+                    <!-- height and weight dimensions -->
+                    <fieldset>
+                        <label for="height">Enter Your Height (cm): </label>
+                        <input id="height" name="height" type="number" required="">
+                        <span class="error" id="heightError"></span>
+                        <label for="weight">Enter Your Weight (Kg): </label>
+                        <input id="weight" name="weight" type="number" required="">
+                        <span class="error" id="weightError"></span>
+                    </fieldset>
+                    <!-- submit button -->
+                    <input aria-label="send" class="button" type="submit" value="Lets Go!">
+                </form>
+            </div>
 
-    </section>
+        </section>
 
-    <!-- surf shop section -->
-    <!-- <section id="surf-shop">
+        <!-- surf shop section -->
+        <!-- <section id="surf-shop">
         <div id="surf-shop-container" class="div-center">
             <img id="surfboard-image" src="" alt="Surfboard image">
             <h2 id="surfboard-type">Longboard</h2>
@@ -73,8 +76,8 @@
         </div>
     </section> -->
 
-    <!-- Surf spot section -->
-    <!-- <section id="surf-spot">
+        <!-- Surf spot section -->
+        <!-- <section id="surf-spot">
         <div id="surf-spot-container" class="div-center">
             <img src="assets/inch-beach-beginner.jpg" alt="Inch Strand, Co. Kerry">
             <h2>Inch Strand, Co. Kerry</h2>
@@ -92,7 +95,7 @@
                     <img id="surfspot-image" src="assets/images/inch-beach-beginner.jpg" alt="Surf spot image">
                     <div id="surfspot-location-text" class="text-center">Surf Spot: Beginner Spot</div>
                 </div>
-                
+
             </div>
             <div id="text-container">
                 <div id="text" class="text-center">Text</div>
@@ -100,9 +103,9 @@
                     <img id="surf-gif" src="" alt="Surfing gif">
                 </div>
                 <div id="option-buttons" class="btn-grid">
-                <button class="btn">Option 1</button>
-                <button class="btn">Option 2</button>
-                <button class="btn">Option 3</button>
+                    <button class="btn">Option 1</button>
+                    <button class="btn">Option 2</button>
+                    <button class="btn">Option 3</button>
                 </div>
             </div>
             <audio id="beginner-audio" src="assets/audio/beginner.mp3" loop></audio>
@@ -110,31 +113,32 @@
             <audio id="advanced-audio" src="assets/audio/advanced.mp3" loop></audio>
         </div>
 
-    </section>
-  </main>
+        </section>
+    </main>
 
-  <!-- footer -->
-  <footer>
-    <ul id="social-networks">
-        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                aria-label="Vist our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
-        </li>
-        <li><a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                aria-label="Vist our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
-        </li>
-        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                aria-label="Vist our YouTube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
-        </li>
-        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                aria-label="Vist our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
-        </li>
-    </ul>
-</footer>
+    <!-- footer -->
+    <footer>
+        <ul id="social-networks">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                    aria-label="Vist our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li><a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                    aria-label="Vist our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="Vist our YouTube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="Vist our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
 
-<!-- Font awesome kit -->
-<script src="https://kit.fontawesome.com/3d6e2b3d0a.js" crossorigin="anonymous"></script>
+    <!-- Font awesome kit -->
+    <script src="https://kit.fontawesome.com/3d6e2b3d0a.js" crossorigin="anonymous"></script>
 
-<!-- javascript link -->
-<script src="assets/js/script.js"></script>
+    <!-- javascript link -->
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

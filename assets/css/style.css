@@ -5,7 +5,9 @@
 
 /* Global styles */
 /* Asterisk wildcard selector to override default styles added by the browser */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -22,7 +24,7 @@ body {
   min-height: 100vh;
 }
 
-.div-center{
+.div-center {
   max-width: fit-content;
   margin-inline: auto;
 }
@@ -35,7 +37,7 @@ body {
   height: 100vh;
 } */
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
@@ -56,6 +58,7 @@ header {
   width: 100%;
   color: black;
 }
+
 header a {
   text-decoration: none;
   color: inherit;
@@ -66,9 +69,10 @@ header a {
   font-size: 20px;
   letter-spacing: 2px;
 }
+
 #menu li {
-  margin-bottom: 1em; 
- }
+  margin-bottom: 1em;
+}
 
 #menu a:hover {
   color: #00BFFF;
@@ -108,12 +112,12 @@ nav {
   cursor: pointer;
 }
 
-main{
+main {
   margin-top: 220px;
 }
 
 /* Taken from webdevsiplified text based game youtube video */
-#surf-game-container{
+#surf-game-container {
   width: 800px;
   font-family: Kalam;
   max-width: 80%;
@@ -124,20 +128,21 @@ main{
   margin-bottom: 20px;
 }
 
-#text{
+#text {
   font-family: Raleway;
-  padding:10px;
+  padding: 10px;
 }
 
-#text-container{
+#text-container {
   background-color: #FFD700;
   color: #F0F8FF;
   background-color: hsl(200, 100%, 50%);
   border: 1px solid hsl(200, 100%, 30%);
   border-radius: 5px;
 }
+
 /* Taken from webdevsiplified text based game youtube video */
-.btn-grid{
+.btn-grid {
   display: flex;
   justify-content: space-evenly;
   padding: 10px 20px;
@@ -145,7 +150,7 @@ main{
   margin-top: 20px;
 }
 
-.btn{
+.btn {
   background-color: hsl(200, 100%, 50%);
   border: 1px solid hsl(200, 100%, 30%);
   border-radius: 5px;
@@ -159,30 +164,34 @@ main{
   margin: 0 5px;
 }
 
-.btn:hover{
+.btn:hover {
   border-color: black;
 }
 
 /* game images */
-.game-images{
+.game-images {
   display: flex;
   justify-content: space-evenly;
 }
-.game-images img{
+
+.game-images img {
   max-width: 120px;
   height: 120px;
 }
-#gif-container{
+
+#gif-container {
   display: flex;
   justify-content: center;
 }
+
 #gif-container img {
   max-width: 100%;
-  width: 350px ;
+  width: 350px;
   height: 200px;
   border-radius: 5px;
   box-shadow: 0 0 5px 2px;
 }
+
 /* footer */
 footer {
   background-color: #FFD700;
@@ -214,60 +223,60 @@ footer {
 /* media query for tablets */
 @media screen and (min-width: 768px) {
 
-    /* header */
-    nav {
-        display: block;
-        position: relative;
-        box-shadow: none;
-        width: fit-content;
-        padding-right: 1rem;
-    }
+  /* header */
+  nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+  }
 
-    #menu {
-        display: flex;
-    }
+  #menu {
+    display: flex;
+  }
 
-    #menu li {
-        margin-bottom: 0;
-    }
+  #menu li {
+    margin-bottom: 0;
+  }
 
-    #menu>li {
-        padding-left: 1rem;
-    }
+  #menu>li {
+    padding-left: 1rem;
+  }
 
-    .nav-toggle-label {
-        display: none;
-    }
+  .nav-toggle-label {
+    display: none;
+  }
 
-    /* main content */
-    main {
-        /* push main content down for larger header */
-        margin-top: 84px;
-    }
+  /* main content */
+  main {
+    /* push main content down for larger header */
+    margin-top: 84px;
+  }
 }
 
 /* media query for larger laptops */
 @media screen and (min-width: 1024px) {
-    body {
-        font-size: 1.25rem;
-    }
+  body {
+    font-size: 1.25rem;
+  }
 
-    #menu li {
-        margin-bottom: 0;
-    }
+  #menu li {
+    margin-bottom: 0;
+  }
 
-    .game-images img{
-      max-width: 380px;
-      height: 380px;
-    }
+  .game-images img {
+    max-width: 380px;
+    height: 380px;
+  }
 
-    main {
-        margin-top: 70px;
-    }
+  main {
+    margin-top: 70px;
+  }
 
-    #hero-img {
-        width: 1024px;
-        height: 683px;
-    }
+  #hero-img {
+    width: 1024px;
+    height: 683px;
+  }
 
 }
