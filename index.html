@@ -36,6 +36,7 @@
                 <li><a aria-label="nav bar contact" href="info.html">Info</a></li>
             </ul>
         </nav>
+        <button id="start-stop-button"><i class="fas fa-play fa-pause"></i></button>
     </header>
 
     <!-- main -->
@@ -100,7 +101,7 @@
             <div id="text-container">
                 <div id="text" class="text-center">Text</div>
                 <div id="gif-container">
-                    <img id="surf-gif" src="" alt="Surfing gif">
+                    <img id="surf-gif" src="assets/images/surfs-up-logo-(500 x 300 px).png" alt="Surfing gif">
                 </div>
                 <div id="option-buttons" class="btn-grid">
                     <button class="btn">Option 1</button>
@@ -112,6 +113,15 @@
             <audio id="intermediate-audio" src="assets/audio/intermediate.mp3" loop></audio>
             <audio id="advanced-audio" src="assets/audio/advanced.mp3" loop></audio>
         </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+
     </main>
 
     <!-- footer -->
