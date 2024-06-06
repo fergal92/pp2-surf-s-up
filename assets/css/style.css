@@ -116,9 +116,21 @@ main {
   margin-top: 220px;
 }
 
-#intro-text-container {
+#text-container {
+  width: 800px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+#intro-text {
   padding-top: 10px;
   padding-bottom: 20px;
+  list-style-type: none;
 }
 
 
@@ -133,8 +145,25 @@ h4 {
 }
 
 #form-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+
+fieldset {
+  margin: 20px;
+  padding: 20px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  display: block;
 }
 
 /* Taken from webdevsiplified text based game youtube video */

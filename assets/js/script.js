@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let valid = true;
 
-        if (height < 90 || height > 300) {
-            showError("heightError", "Height must be between 90cm and 300cm.");
+        if (height < 10 || height > 300) {
+            showError("heightError", "Height must be between 10cm and 300cm.");
             valid = false;
         }
 
-        if (weight < 20 || weight > 300) {
-            showError("weightError", "Weight must be between 20kg and 300kg.");
+        if (weight < 5 || weight > 600) {
+            showError("weightError", "Weight must be between 5kg and 600kg.");
             valid = false;
         }
 
