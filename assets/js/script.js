@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Hide the form
         document.getElementById('data-input').style.display = 'none';
 
+        // Hide the text-container
+        document.getElementById('text-container').style.display = 'none';
+
         // Show the surf game
         document.getElementById('surf-game-container').style.display = 'block';
 

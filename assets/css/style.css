@@ -116,6 +116,27 @@ main {
   margin-top: 220px;
 }
 
+#intro-text-container {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+h3,
+h4 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.bottom-padding {
+  padding-bottom: 10px;
+}
+
+#form-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* Taken from webdevsiplified text based game youtube video */
 #surf-game-container {
   width: 800px;
