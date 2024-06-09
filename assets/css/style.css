@@ -64,6 +64,15 @@ header a {
   color: inherit;
 }
 
+#start-stop-button:hover {
+  color: #00BFFF;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  cursor: pointer;
+}
+
 #menu {
   list-style-type: none;
   font-size: 20px;
@@ -191,6 +200,10 @@ fieldset {
   border-radius: 5px;
 }
 
+#option-buttons:hover {
+  cursor: pointer;
+}
+
 /* Modal */
 .modal {
   display: none;
@@ -289,6 +302,7 @@ fieldset {
   border-radius: 5px;
   box-shadow: 0 0 5px 2px;
 }
+
 
 /* footer */
 footer {
