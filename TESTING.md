@@ -1,12 +1,15 @@
 # Testing
 ## Compatibility
+I confirmed the correct functionality, responsivness and appearence by testing the website in Chrome, Firefox and Edge browsers. The website worked without issue in all three.
 
 Chrome browser: 
+![Chrome browser](readme-media/chrome-responsive.png)
 
 Firefox browser: 
+![Firefox browser](readme-media/firefox-responsive.png)
 
 Edge browser: 
-
+![Edge browser](readme-media/edge-responsive.png)
 ## Responsiveness
 
 ## Manual Testing

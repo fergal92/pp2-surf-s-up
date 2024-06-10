@@ -70,8 +70,7 @@ Raleway: A geometric sans-serif with a warm, inviting tone. It has a large famil
 
 Yellowtail: A playful, bouncy script font that brings to mind tropical cocktails and palm trees. Use it for logos, titles, or short phrases.
 
-Kalam: A hand-drawn, casual font with a handwritten feel. It works well for body text in a tropical-themed design
-.
+Kalam: A hand-drawn, casual font with a handwritten feel. It works well for body text in a tropical-themed design.
 ### Wireframes
 #### Mobile Wireframes
 ![Surf shop](readme-media/mobile-surf-shop.png)
