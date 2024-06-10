@@ -52,7 +52,8 @@ Surf game: ![Surf game](readme-media/responsive-surf-game.png)
 
 
 #### CSS
-
+The W3C CSS validation service was used and no validation errors were present
+![CSS validation errors](readme-media/css-validation.png)
 ### Accessibility
 
 
