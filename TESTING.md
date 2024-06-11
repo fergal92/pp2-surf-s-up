@@ -20,8 +20,8 @@ Surf game: ![Surf game](readme-media/responsive-surf-game.png)
 | feature | action | expected result | tested | passed | comments |
 | --- | --- | --- | --- | --- | --- |
 | Navbar | | | | | |
-| Home | Click on the "Home" link | The user is redirected to the main page | Yes | Yes | - |
-| Maintenance | Click on the "Maintenance" link | The user is redirected to the gallery page | Yes | Yes | - |
+| Icon | Click on the Icon link | The user is redirected to the main page | Yes | Yes | - |
+| Audio button | Click on the audio button | The user can start and pause the audio | Yes | Yes | - |
 | Contact | Click on the "Contact" link | The user is redirected to the contact page | Yes | Yes | - |
 | Footer | | | | | |
 | Instagram icon in the footer | Click on the Instagram icon | The user is redirected to the Instagram page | Yes | Yes | - |
@@ -48,19 +48,26 @@ Surf game: ![Surf game](readme-media/responsive-surf-game.png)
 #### HTML
 ##### Index page
 
-##### Maintenance page
-
-
 #### CSS
 The W3C CSS validation service was used and no validation errors were present
 ![CSS validation errors](readme-media/css-validation.png)
-### Accessibility
 
+#### javascript
+The jshint validator tool was used to validate the javascript code. 0 errors were found and 64 warnings were found
+![jshint](readme-media/validation-js.png)
+### Accessibility
+I confirmed that the colour and fonts are easy to read by running it through lighthouse in chrome devtools I did this for each page of the website
+
+![lighthousereport](readme-media/lighthouse-report.png)
 
 ## Bugs
 ### Solved bugs
+- I could not get the audio to not play upon loading the site but I solved that by putting the stopAllAudio function at the end of the js file.
+- I could not hide the form and description section at the beginning but I used javascript to change the css display value to hidden
+- I could not change the audio based on the surf level but I solved that by deciding which song was to play based on the surfboard state assigned at the time. 
 
 ### Unsolved Bugs
-
+- In mobile view the X should be a hamburger icon and it should be on the right of the navbar. Currently it is in the center of the navbar
 
 ## Mistakes
+- I left it too late to validate the html, css and javascript. Because of this I am forced to rush to try to fix errrors a few hpours before the deadline. This is a mistake

@@ -140,8 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const startStopButton = document.getElementById('start-stop-button');
 
     // Text based game
-    console.log('hello')
-    // console.log(surfboardSize);
     let state = {}
     let currentAudio = null;
     let currentSurfboardState = '';
@@ -319,17 +317,6 @@ document.addEventListener("DOMContentLoaded", () => {
             stopAllAudio(); // If audio is currently playing, stop it
         }
     }
-    /**
-     * Stops all audio
-     */
-    // function stopAllAudio() {
-    //     beginnerAudio.pause();
-    //     beginnerAudio.currentTime = 0;
-    //     intermediateAudio.pause();
-    //     intermediateAudio.currentTime = 0;
-    //     advancedAudio.pause();
-    //     advancedAudio.currentTime = 0;
-    // }
 
     // Show modal with custom message
     function showModal(message) {
