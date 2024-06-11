@@ -1,5 +1,6 @@
+/* jshint esversion: 11 */
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("surfForm");
+    const form = document.getElementById("surf-form");
 
     form.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevent form submission if validation fails
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('data-input').style.display = 'none';
 
         // Hide the text-container
-        document.getElementById('text-container').style.display = 'none';
+        document.getElementById('text-container-1').style.display = 'none';
 
         // Show the surf game
         document.getElementById('surf-game-container').style.display = 'block';
@@ -79,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
      * Clear all form errors
      */
     function clearErrors() {
-        document.getElementById("heightError").textContent = "";
-        document.getElementById("weightError").textContent = "";
+        document.getElementById("height-error").textContent = "";
+        document.getElementById("weight-error").textContent = "";
     }
 
     // Calculate surfboard size for each category
@@ -129,18 +130,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    const textElement = document.getElementById('text')
-    const optionButtonsElement = document.getElementById('option-buttons')
+    const textElement = document.getElementById('text');
+    const optionButtonsElement = document.getElementById('option-buttons');
     const surfboardImage = document.getElementById('surfboard-image');
     const surfSpotImage = document.getElementById('surfspot-image');
-    const surfGif = document.getElementById('surf-gif')
+    const surfGif = document.getElementById('surf-gif');
     const beginnerAudio = document.getElementById('beginner-audio');
     const intermediateAudio = document.getElementById('intermediate-audio');
     const advancedAudio = document.getElementById('advanced-audio');
     const startStopButton = document.getElementById('start-stop-button');
 
     // Text based game
-    let state = {}
+    let state = {};
     let currentAudio = null;
     let currentSurfboardState = '';
     let isAudioPlaying = true;
@@ -156,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
             surfGif: ''
         };
         updateAudio();
-        showTextNode(1)
+        showTextNode(1);
     }
 
     /**
@@ -224,20 +225,20 @@ document.addEventListener("DOMContentLoaded", () => {
      * Shows the text at the selected stage of the game
      */
     function showTextNode(textNodeIndex) {
-        const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-        textElement.innerText = textNode.text
+        const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+        textElement.innerText = textNode.text;
         while (optionButtonsElement.firstChild) {
-            optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+            optionButtonsElement.removeChild(optionButtonsElement.firstChild);
         }
         textNode.options.forEach(option => {
             if (showOption(option)) {
-                const button = document.createElement('button')
-                button.innerText = option.text
-                button.classList.add('btn')
-                button.addEventListener('click', () => selectOption(option))
-                optionButtonsElement.appendChild(button)
+                const button = document.createElement('button');
+                button.innerText = option.text;
+                button.classList.add('btn');
+                button.addEventListener('click', () => selectOption(option));
+                optionButtonsElement.appendChild(button);
             }
-        })
+        });
     }
 
     /** 
@@ -251,9 +252,9 @@ document.addEventListener("DOMContentLoaded", () => {
      * Selects the current game option
      */
     function selectOption(option) {
-        const nextTextNodeId = option.nextText
+        const nextTextNodeId = option.nextText;
         if (nextTextNodeId <= 0) {
-            return startGame()
+            return startGame();
         }
         const newState = Object.assign({}, state, option.setState);
         if (newState.surfboard && newState.surfboard !== currentSurfboardState) {

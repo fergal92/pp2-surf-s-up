@@ -116,11 +116,16 @@ main {
   margin-top: 220px;
 }
 
-#text-container {
+.text-container {
   width: 800px;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+  background-color: #FFD700;
+  color: #F0F8FF;
+  background-color: hsl(200, 100%, 50%);
+  border: 1px solid hsl(200, 100%, 30%);
+  border-radius: 5px;
 }
 
 li {
@@ -183,13 +188,9 @@ fieldset {
   padding: 10px;
 }
 
-#text-container {
-  background-color: #FFD700;
-  color: #F0F8FF;
-  background-color: hsl(200, 100%, 50%);
-  border: 1px solid hsl(200, 100%, 30%);
-  border-radius: 5px;
-}
+/* #text-container {
+ 
+} */
 
 #option-buttons:hover {
   cursor: pointer;

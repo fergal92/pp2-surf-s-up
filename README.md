@@ -15,6 +15,15 @@ Visit the site [here](https://fergal92.github.io/pp2-surf-s-up/index.html)
 - Build an easy to use navbar
 - Have the nav bar stick to the top of the page at all times
 
+### As a user I can enjoy a game about surfing
+#### Acceptance Criteria:
+- Have a game with a surfing theme
+- Have it be interactive
+#### Tasks:
+- Build a text based game with the core theme about surfing
+- Include images, gifs and audio to immerse the player in the game
+- Have the audio begin as the game begins. The audio will be the genre of surf rock. This will immerse the player in the surfing theme
+
 ## Agile Methodologies
 ### GitHub Projects
 Link to the GitHub project page that was used to manage the website build. Items were added to the kanban board and worked through. Items were linked to the project repo and closed off as the project progressed. [github project board](https://github.com/users/fergal92/projects/2/views/1)
@@ -23,25 +32,35 @@ Link to the GitHub project page that was used to manage the website build. Items
 
 #### Navigation Bar
 - Located at the top of the page at all times. Provides an audio stop/start button, a restart link and a logo that links back to the index.html page
+![navbar](readme-media/navbar-screenshot.png)
 #### Data collection form
 - Form on the index page to gather the users name, height and weight data
 - height and weight data are used to calculate what size of surboard will be assigned to the user
+![navbar](readme-media/data-entry-form.png)
 #### The Footer
 - The footer section includes links to relevant social media sites. The links open to a new tab to allow for easy navigation for the user.
 - The footer sticks to the bottom of the page
+![navbar](readme-media/footer-screenshot.png)
+
 #### Modal message
-- Modal pop up message to tell the user the game has started
+- Modal pop up message to tell the user the game has started.
+- There is also a modal message at the end of the game to tell users they have completed the game.
+![navbar](readme-media/welcome-modal-screenshot.png)
+![navbar](readme-media/modal-complete.png)
 #### Surf game
 - Game contains an image of the surfboard the user has been assigned and the surf spot they will surf at. The surf spot and surf board are determined by the level of the player. There are three levels, beginner, intermediate and advanced
 - Gifs based on the id nummber of the textNodes Array.
 - Option buttons based on the id number of the textNodes Array. 
 - Three audio tracks that play based on the level of the user at the time. The audio can be played and paused using the audio control button in the nav bar.
+![navbar](readme-media/surf-game-screenshot.png)
+
 ### Features left to implement 
 - An info page based on the surfboard types and the different surf spots. The page would contain information and further explain surfing concepts.
 - Furter surfing manouvers and more difficult levels to the game
 ## Technologies Used
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - was used as the foundation of the site.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used to add the styles and layout of the site.
+- [javascript](https://www.javascript.com/) - was used for this website
 - [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) - was used to arrange items simmetrically on the pages.
 - [Balsamiq](https://balsamiq.com/) - was used to make wireframes for the website.
 - [VSCode](https://code.visualstudio.com/) - was used as the main tool to write and edit code.
@@ -50,6 +69,7 @@ Link to the GitHub project page that was used to manage the website build. Items
 - [Perplexity AI](https://www.perplexity.ai/) - was used to help develop design ideas such as colour scheme and font type
 - [Am I Responsive](https://ui.dev/amiresponsive) - was used to generate an image of the website across different screen types and resolutions
 - [GitHub Pages](https://pages.github.com/) - was used to host the website
+
 
 ## Design
 ### Colours
@@ -99,22 +119,26 @@ The live link to the site can be found here https://fergal92.github.io/pp2-surf-
 ### Local Deployment
 In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
-`https://github.com/fergal92/pp2-surf-s-up.git`
+`git clone https://github.com/fergal92/pp2-surf-s-up.git`
 ## Credits
 ### Content
 - The fonts were taken from google fonts 
 - Perplexity AI was used to generate the colour scheme
 - webDevSimplified javascript game tutorial follow along video was used as inspiration to form the basis of the surf game - https://www.youtube.com/watch?v=R1S_NhKkvGA
+
 ### Media
 - The photos used in the project were taken from google searches of the web. 
 - The Gifs used in the website were taken from google searches for surfing gifs.
 - The Favicons were taken for free from this website https://favicon.io/emoji-favicons/
 - The icons in the footer were taken from font awesome - https://fontawesome.com/
+
 ## Future improvements
 - add custom 404 page;
 - add further levels and stages to the game with added complextity 
 - Add another section with info about the surfboards and surf spots used in the game.
 - Add better commit messages from the start of the project
+- Audio - I know that the audio should not play unless it has been clicked to play with the audio control buttons. My mentor made that clear to me in the last mentor meeting hours before the deadline but I did not have time to implement the change. It also took me a long time to create the functionality for the audio to begin playing when the option button was clicked to inititae the game and ti update the audio track when the game level increased. In future I would make the audio only play when the audio control button is clicked.
+
 ## Acknowledgements
 - [Iuliia Konovalova](https://github.com/IuliiaKonovalova) - My mentor Julia was very supportive during this project. She certainly pushed me to complete a high standard of project especially for the readme and testing sections. I took inspiration from her README.md and TESTING.md files for my own.
 - [Happiness Generator](https://github.com/broken-helix/happiness/) - My first hackathon project. I learned so much from participating in this project and team. We won the March hackathon for 2024 and my team members were a great source of inspiration for me.
