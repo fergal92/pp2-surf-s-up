@@ -134,28 +134,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const surfboardImage = document.getElementById('surfboard-image');
     const surfSpotImage = document.getElementById('surfspot-image');
     const surfGif = document.getElementById('surf-gif');
-    const beginnerAudio = document.getElementById('beginner-audio');
-    const intermediateAudio = document.getElementById('intermediate-audio');
-    const advancedAudio = document.getElementById('advanced-audio');
-    const startStopButton = document.getElementById('start-stop-button');
 
     // Text based game
     let state = {};
-    let currentAudio = null;
     let currentSurfboardState = '';
-    let isAudioPlaying = true;
 
     /**
      * Starts the game
      */
     function startGame() {
-        stopAllAudio();
         state = {
             surfboard: 'beginner surfboard',
             surfSpot: 'beginner surf spot',
             surfGif: ''
         };
-        updateAudio();
         showTextNode(1);
     }
 
@@ -258,7 +250,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const newState = Object.assign({}, state, option.setState);
         if (newState.surfboard && newState.surfboard !== currentSurfboardState) {
             currentSurfboardState = newState.surfboard;
-            playAudio(newState.surfboard);
         }
         state = newState;
         updateImages();
@@ -273,48 +264,6 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 window.location.href = 'index.html';
             }, 15000); // Adjust the delay time as needed
-        }
-    }
-
-    function playAudio() {
-        stopAllAudio(); // Stop any currently playing audio
-
-        // Determine which audio to play based on the current surfboard state
-        if (state.surfboard === 'beginner surfboard') {
-            currentAudio = beginnerAudio;
-            currentAudio.volume = 0.01; // Set the volume to 50%
-        } else if (state.surfboard === 'intermediate surfboard') {
-            currentAudio = intermediateAudio;
-            currentAudio.volume = 0.01; // Set the volume to 50%
-        } else if (state.surfboard === 'advanced surfboard') {
-            currentAudio = advancedAudio;
-            currentAudio.volume = 0.01; // Set the volume to 50%
-        }
-
-        // Play the selected audio
-        if (currentAudio) {
-            currentAudio.play();
-            isAudioPlaying = true;
-        }
-    }
-
-    function stopAllAudio() {
-        beginnerAudio.pause();
-        intermediateAudio.pause();
-        advancedAudio.pause();
-        currentAudio = null;
-        isAudioPlaying = false;
-    }
-
-    function updateAudio() {
-        playAudio(state.surfboard);
-    }
-
-    function toggleAudio() {
-        if (!currentAudio) {
-            playAudio(); // If no audio is currently playing, start playing
-        } else {
-            stopAllAudio(); // If audio is currently playing, stop it
         }
     }
 
@@ -662,7 +611,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // call start game function
     startGame();
-    stopAllAudio();
-
-    startStopButton.addEventListener('click', toggleAudio);
 });
