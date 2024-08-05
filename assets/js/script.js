@@ -50,19 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     function validateForm() {
         clearErrors();
-
         const height = parseFloat(document.getElementById("height").value);
         const weight = parseFloat(document.getElementById("weight").value);
 
         let valid = true;
 
         if (height < 10 || height > 300) {
-            showError("heightError", "Height must be between 10cm and 300cm.");
+            showError("height-error", "Height must be between 10cm and 300cm."); // corrected
             valid = false;
         }
 
         if (weight < 5 || weight > 600) {
-            showError("weightError", "Weight must be between 5kg and 600kg.");
+            showError("weight-error", "Weight must be between 5kg and 600kg."); // corrected
             valid = false;
         }
 
