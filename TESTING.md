@@ -11,11 +11,10 @@ Firefox browser:
 Edge browser: 
 ![Edge browser](readme-media/edge-responsive.png)
 ## Responsiveness
-The website was checked for responsiveness using the [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb). The index page with the data input form was tested. Then the index page with the surf game was tested. All pages worked as expected and were responsive. The website is fully responsive and has a mobile first design.
+The website was checked for responsiveness using the [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb). The index page with the data input form was tested. The website is fully responsive and has a mobile first design.
 
 Data input form: ![Data input form](readme-media/responsive-data-form.png)
 
-Surf game: ![Surf game](readme-media/responsive-surf-game.png)
 ## Manual Testing
 | feature | action | expected result | tested | passed | comments |
 | --- | --- | --- | --- | --- | --- |

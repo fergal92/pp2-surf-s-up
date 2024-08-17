@@ -188,11 +188,7 @@ fieldset {
   padding: 10px;
 }
 
-/* #text-container {
- 
-} */
-
-#option-buttons:hover {
+.btn-grid .btn:hover {
   cursor: pointer;
 }
 

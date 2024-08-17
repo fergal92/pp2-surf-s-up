@@ -260,10 +260,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show alert message
             showAlert('Congratulations! You have completed the game. Go out and surf for real now you are ready!');
 
-            // Delay the reload by 2 seconds
+            // Delay the reload
             setTimeout(() => {
                 window.location.href = 'index.html';
-            }, 15000); // Adjust the delay time as needed
+            }, 7500); 
         }
     }
 
