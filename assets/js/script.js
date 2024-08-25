@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // Get the form data
-        const firstName = document.getElementById('first-name').value;
+        let firstName = document.getElementById('first-name').value;
+        firstName = firstName.toUpperCase();
         const height = document.getElementById('height').value;
         const weight = document.getElementById('weight').value;
 
